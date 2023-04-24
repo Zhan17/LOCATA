@@ -179,7 +179,7 @@ class Analysis():
             
             # text format
             spec_type_percentage = business_counts[spec_bus_type] / business_counts.sum() * 100
-            text_format = "<div style='text-align:center; font-size: 24px;'> Current Businesses of type {} accounts for {per:.3f}% in LA Area"
+            text_format = "<div style='text-align:center; font-size: 24px;'> Current Businesses of type <strong style='color:blue'>{}</strong> accounts for <strong style='color:red'>{per:.3f}%</strong> in LA Area"
             if spec_type_percentage < 0.5:
                 full_text  = text_format.format(spec_bus_type,per=spec_type_percentage)\
                             +", there may be a lack of demand for this type of business, \
