@@ -287,10 +287,10 @@ class Dashboard():
                 height=600,
             )
             fig.update_layout(
-            title=f"House Value and Percentage Change for Zipcode {zipcode}",
+            title=f"House ZHVI Value and Percentage Change for Zipcode {zipcode}",
             xaxis_title="Date",
-            yaxis_title="House Value",
-            yaxis=dict(title="House Value", side="left", position=0.05),
+            yaxis_title="House ZHVI Value",
+            yaxis=dict(title="House ZHVI Value", side="left", position=0.05),
             yaxis2=dict(title="Percentage Change", overlaying='y', side='right', position=0.95, tickformat='.2f'),
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
             font=dict(family="Arial", size=12, color="black"),
@@ -325,18 +325,19 @@ class Dashboard():
                 </style>
             """
             st.markdown(css, unsafe_allow_html=True)
-            st.markdown(f"<div class='interp-text'> In zipcode {zipcode}, the latest house value is ${latest_house_value:,.2f} as of {latest_date.strftime('%Y-%m-%d')}. </div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='interp-text'> In zipcode {zipcode}, the latest house ZHVI value is ${latest_house_value:,.2f} as of {latest_date.strftime('%Y-%m-%d')}. </div>", unsafe_allow_html=True)
 
             #st.markdown(f"<div class='interp-text'> In zipcode {zipcode}, the latest house value is ${latest_house_value:,.2f} as of {latest_date.strftime('%Y-%m-%d')}. </div>", unsafe_allow_html=True)
             #st.write(
             #f"In zipcode {zipcode}, the latest house value is ${latest_house_value:,.2f} as of {latest_date.strftime('%Y-%m-%d')}.")
-            st.markdown(f"<div class='interp-text'> The average of the last three years' yearly house value change percentage is {average_yearly_percentage_change:.2f}%. </div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='interp-text'> The average of the last three years' yearly house ZHVI value change percentage is {average_yearly_percentage_change:.2f}%. </div>", unsafe_allow_html=True)
             #st.write(
             #f"Average of the last three years' yearly house value change percentage: {average_yearly_percentage_change:.2f}%")
-            st.markdown(f"<div class='interp-text'> The average of the last three years' yearly house value change is ${average_yearly_value_change:,.2f}. </div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='interp-text'> The average of the last three years' yearly house ZHVI value change is ${average_yearly_value_change:,.2f}. </div>", unsafe_allow_html=True)
             #st.write(f"Average of the last three years' yearly house value change: ${average_yearly_value_change:,.2f}")
-            st.markdown(f"<div class='interp-text'> The total percentage of house value change in the last three years is {total_percentage_change:.2f}%. </div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='interp-text'> The total percentage of house ZHVI value change in the last three years is {total_percentage_change:.2f}%. </div>", unsafe_allow_html=True)
             #st.write(f"Total percentage of house value change in the last three years: {total_percentage_change:.2f}%")
+            st.caption("Zillow Home Value Index (ZHVI): A measure of the typical home value and market changes across a given region and housing type. It reflects the typical value for homes in the 35th to 65th percentile range.")
         def competitor_bar_charts(df,b_type,zipcode):
             df['Price Range'].fillna("Not Provided", inplace=True)
             df_zip = df[df['Zip Code'] == zipcode]
@@ -435,7 +436,7 @@ class Dashboard():
             
             #st.write(""" ## Dashboard for Zipcode {}""".format(yi))
             open_business_graph(y[1:],df_yelp,yi)
-            tab1, tab2= st.tabs(["House Price Trend", "Competitors"])
+            tab1, tab2= st.tabs(["House ZHVI Trend", "Competitors"])
             
             
             with tab1:
