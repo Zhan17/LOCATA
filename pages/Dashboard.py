@@ -321,7 +321,7 @@ class Dashboard():
                         text-align: center; 
                     font-size: 1.25em;
                     margin-top: 0.1em;
-                    margin-bottom: 2em;
+                    margin-bottom:0.5em;
                 }
                 </style>
             """
@@ -336,8 +336,12 @@ class Dashboard():
             #f"Average of the last three years' yearly house value change percentage: {average_yearly_percentage_change:.2f}%")
             st.markdown(f"<div class='interp-text'> The average of the last three years' yearly house ZHVI value change is ${average_yearly_value_change:,.2f}. </div>", unsafe_allow_html=True)
             #st.write(f"Average of the last three years' yearly house value change: ${average_yearly_value_change:,.2f}")
-            st.markdown(f"<div class='interp-text'> The total percentage of house ZHVI value change in the last three years is {total_percentage_change:.2f}%. </div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='interp-text'> The total percentage of house ZHVI value change in the last three years is {total_percentage_change:.2f}%.  <br> \
+             <br> \
+              <br> \
+              </div>", unsafe_allow_html=True)
             #st.write(f"Total percentage of house value change in the last three years: {total_percentage_change:.2f}%")
+            
             st.caption("Zillow Home Value Index (ZHVI): A measure of the typical home value and market changes across a given region and housing type. It reflects the typical value for homes in the 35th to 65th percentile range.")
         def competitor_bar_charts(df,b_type,zipcode):
             df['Price Range'].fillna("Not Provided", inplace=True)
