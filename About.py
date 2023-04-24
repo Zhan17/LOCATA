@@ -35,7 +35,7 @@ class About():
         self.subtitle = "<div class='subtitle'> Decision Model and Simulation for Complex Commercial Site Selection Based on Existing Commercial Environment Analysis</div>"
         self.underlined_title = '________________________________________________________________ '
         self.team = "<div class='team'> \U0001F4D2 MongoUSC :  <code>Zihao Han</code>,  <code>Niantong Zhou</code>,  <code>Yuxuan Shi</code>,  <code>Gordon Su</code> </div>"
-        self.mainpage_img= 'image2.png'
+        self.mainpage_img= '../image2.png'
         self.y=[]
         st.markdown("""
         <style>
