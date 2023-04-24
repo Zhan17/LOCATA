@@ -302,7 +302,7 @@ class Analysis():
                 zip_max_race.append([value[0][0],round(value[0][1],2),i])
             overall_max=index[0]
             str1="""<div style='text-align:left; font-size: 24px;'> This Bar plot shows zipcode <strong style='color:blue'>{zip1}</strong>,<strong style='color:blue'>{zip2}</strong>,<strong style='color:blue'>{zip3}</strong>, has a greater proportion of Race{overall_max}. 
-            There are more {race1} in <strong style='color:blue'>{max1}</strong> which is {p1}%,more {race2} in <strong style='color:blue'>{max2}</strong> which is {p2}% ,more {race3} in <strong style='color:blue'>{max3}</strong> which is {p3}%.</div>""".format(
+            There are more {race1} in <strong style='color:blue'>{max1}</strong> which is <strong style='color:red'>{p1}%</strong>,more {race2} in <strong style='color:blue'>{max2}</strong> which is <strong style='color:red'>{p2}%</strong> ,more {race3} in <strong style='color:blue'>{max3}</strong> which is <strong style='color:red'>{p3}%</strong>.</div>""".format(
                 zip1=zipcode_list[0],
                 zip2 = zipcode_list[1],
                 zip3 = zipcode_list[2],
