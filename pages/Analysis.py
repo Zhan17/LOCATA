@@ -318,10 +318,10 @@ class Analysis():
                 max1=zip_max_race[0][2],
                 race2=zip_max_race[1][0],
                 p2=zip_max_race[1][1],
-                max2=zip_max_race[0][2],
+                max2=zip_max_race[1][2],
                 race3=zip_max_race[2][0],
                 p3=zip_max_race[2][1],
-                max3=zip_max_race[0][2])
+                max3=zip_max_race[2][2])
             st.write(str1, unsafe_allow_html=True)
 
         ####### input data#######
@@ -375,7 +375,7 @@ class Analysis():
                         </style>
                     '''
         st.markdown(css, unsafe_allow_html=True)
-        tab1, tab2, tab3 = st.tabs(["Geotemporal Statistic", "Competitors' Information", "Demographics"])
+        tab1, tab2, tab3 = st.tabs(["Geotemporal Statistic", "Market' Information", "Demographics"])
         with tab1:
             open_business_graph(la_open_business)
             t1, t2 = st.columns(2)
