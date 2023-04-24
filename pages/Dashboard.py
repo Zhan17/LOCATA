@@ -321,6 +321,7 @@ class Dashboard():
                         text-align: center; 
                     font-size: 1.25em;
                     margin-top: 0.1em;
+                    margin-bottom: 2em;
                 }
                 </style>
             """
