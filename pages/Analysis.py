@@ -139,7 +139,7 @@ class Analysis():
             #st.dataframe(df4)
 
             max_avg=df4['zipcode'].tolist()
-            text="""Zipcode {} 's business type {} has higher average rating and number of reviews on Yelp""".format(max_avg[0],y[0])
+            text=text="""Zipcode {} 's {} has higher average rating on Yelp""".format(max_avg[0],y[0])
             st.write(text)
         def average_income(df_income,y):
             st.write("#### Average Income of the Recommended Zipcode")
