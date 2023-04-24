@@ -33,7 +33,7 @@ def compare(y1,y2,y3,input):
     
     with col2:
         #st.subheader(str(y1))
-        st.markdown(":green[Rental value ] "+ avg(str(y1),"House Value",input))
+        st.markdown(":green[House value ] "+ avg(str(y1),"House Value",input))
         st.markdown(":orange[Income value ] " + avg(str(y1),"Estimated Median Income",input))
         sum1 = sum(str(y1), input, 'Estimated Median Income')
         st.markdown(":violet[Total Business] " + str(sum1[0]))
@@ -41,14 +41,14 @@ def compare(y1,y2,y3,input):
 
     with col4:
         #st.subheader(str(y2))
-        st.markdown(":green[Rental value] "+ avg(str(y2),"House Value",input))
+        st.markdown(":green[House value] "+ avg(str(y2),"House Value",input))
         st.markdown(":orange[Income value] " + avg(str(y2),"Estimated Median Income",input))
         sum2 = sum(str(y2), input, 'Estimated Median Income')
         st.markdown(":violet[Total Business] " + str(sum2[0]))
         st.markdown(":blue[Population] " + avg(str(y2),"Population",input))
     with col6:
         #st.subheader(str(y3))
-        st.markdown(":green[Rental value] " + avg(str(y3),"House Value",input))
+        st.markdown(":green[House value] " + avg(str(y3),"House Value",input))
         st.markdown(":orange[Income value] " + avg(str(y3),"Estimated Median Income",input))
         sum3 = sum(str(y3), input, 'Estimated Median Income')
         st.markdown(":violet[Total Business] " + str(sum3[0]))
