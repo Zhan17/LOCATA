@@ -11,3 +11,4 @@ vega_datasets
 pydeck
 openpyxl
 st_pages
+Image
