@@ -338,7 +338,6 @@ class Dashboard():
             #st.write(f"Average of the last three years' yearly house value change: ${average_yearly_value_change:,.2f}")
             st.markdown(f"<div class='interp-text'> The total percentage of house ZHVI value change in the last three years is {total_percentage_change:.2f}%.  <br> \
              <br> \
-              <br> \
               </div>", unsafe_allow_html=True)
             #st.write(f"Total percentage of house value change in the last three years: {total_percentage_change:.2f}%")
             q1,q2,q3=st.columns([0.1,3,0.1])
