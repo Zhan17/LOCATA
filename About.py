@@ -7,6 +7,7 @@ import plotly.express as px
 
 #import scipy
 import plotly.figure_factory as ff
+#import Analysis
 import Dashboard
 import time
 import concurrent.futures
@@ -88,7 +89,7 @@ class About():
         st.write(self.underlined_title)
         st.markdown(self.team, unsafe_allow_html=True)
         st.markdown("<div class='step'> How to use Locata </div>", unsafe_allow_html=True)
-        st.image(self.mainpage_img, use_column_width=True)
+        st.image('image2.png', use_column_width=True)
         aboutlocata="""
         About Locata:
                 + The recent pandemic has cast a shadow over small businesses,
