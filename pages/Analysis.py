@@ -135,7 +135,7 @@ class Analysis():
                     'Average reviews': [avg(str(y[1]),'Review Count',df_yelp), avg(str(y[2]),'Review Count',df_yelp), avg(str(y[3]),'Review Count',df_yelp)]}
             df4 = pd.DataFrame(data)
             #sort the dataframe by average rate
-            df4_rate = df4.sort_values(by=['average rate'], ascending=False)
+            df4_rate = df4.sort_values(by=['Average rate'], ascending=False)
             df4_review = df4.sort_values(by=['Average reviews'], ascending=False)
             st.dataframe(df4_rate, height=150, width=500)
             #st.dataframe(df4)
