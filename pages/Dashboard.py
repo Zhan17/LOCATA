@@ -450,9 +450,10 @@ class Dashboard():
                 C1,C2,C3=st.columns([0.1,1,0.1])
                 try:
                     with C2.container():
-                        top5_most_reviews_businesses(df3, int(yi), b_type)
-                    with C2.container():
                         competitor_bar_charts(df_yelp, b_type, int(yi))
+                        
+                    with C2.container():
+                        top5_most_reviews_businesses(df3, int(yi), b_type)
                     
                     with C2.container():
                         
