@@ -264,7 +264,7 @@ class Locata_Main:
         dropdown=['Select']
         for i in range(len(col_list)):
             dropdown.append(col_list[i])
-        dropdown=sorted(dropdown)
+        #dropdown=sorted(dropdown)
         business_type = st.selectbox('Top 50 Business Type',dropdown)
 
         price_business_list = ['Mexican', 'Coffee & Tea', 'Nail Salons', 'Hair Salons', 'Sandwiches', 'Fast Food', 'Bars', 'Thai']
