@@ -9,7 +9,6 @@ plotly
 altair
 vega_datasets
 pydeck
-ast
 openpyxl
 Analysis
 time
