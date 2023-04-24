@@ -89,7 +89,7 @@ class About():
         st.write(self.underlined_title)
         st.markdown(self.team, unsafe_allow_html=True)
         st.markdown("<div class='step'> How to use Locata </div>", unsafe_allow_html=True)
-        path = os.path.dirname(__file__)
+        #path = os.path.dirname(__file__)
         image1 = Image.open('image2.png')
         st.image(image1, use_column_width=True)
         aboutlocata="""
