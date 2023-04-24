@@ -131,20 +131,26 @@ class Analysis():
                     formatted_num = "{:.2f}".format(number)
                     return formatted_num
             data = {'zipcode': [str(y[1]),str(y[2]),str(y[3])],
-                    'average rate': [avg(str(y[1]),'Rating',df_yelp), avg(str(y[2]),'Rating',df_yelp), avg(str(y[3]),'Rating',df_yelp)],
+                    'Average rate': [avg(str(y[1]),'Rating',df_yelp), avg(str(y[2]),'Rating',df_yelp), avg(str(y[3]),'Rating',df_yelp)],
                     'Average reviews': [avg(str(y[1]),'Review Count',df_yelp), avg(str(y[2]),'Review Count',df_yelp), avg(str(y[3]),'Review Count',df_yelp)]}
             df4 = pd.DataFrame(data)
-            df4 = df4.sort_values(by=['average rate'], ascending=False)
-            st.dataframe(df4, height=150, width=500)
+            #sort the dataframe by average rate
+            df4_rate = df4.sort_values(by=['average rate'], ascending=False)
+            df4_review = df4.sort_values(by=['Average reviews'], ascending=False)
+            st.dataframe(df4_rate, height=150, width=500)
             #st.dataframe(df4)
-
-            max_avg=df4['zipcode'].tolist()
-            text=text="""Zipcode {} 's {} has higher average rating on Yelp""".format(max_avg[0],y[0])
+            max_avg=df4_rate['zipcode'].tolist()
+            text="""Zipcode {} 's {} has higher average rating on Yelp""".format(max_avg[0],y[0])
+            max_review = df4_review['zipcode'].tolist()
+            text = """Zipcode {} 's {} has higher average rating on Yelp""".format(max_avg[0], y[0])
+            text2 = """Zipcode {} 's {} has higher average number of reviews on Yelp""".format(max_review[0], y[0])
             st.write(text)
+            st.write(text2)
         def average_income(df_income,y):
             st.write("#### Average Income of the Recommended Zipcode")
             df_income_zip = df_income[df_income['Zip Code'].isin([int(y[1]), int(y[2]), int(y[3])])]
             df_income_zip['Zip Code'] = df_income_zip['Zip Code'].astype(str)
+            df_income_zip.reset_index(drop=True, inplace=True)
             st.dataframe(df_income_zip,height=150, width=500)
             text2 = """ Based on the following chart, you can clearly know the average income of each area and choose a community that is more in line with your product price positioning"""
             st.write(text2)
