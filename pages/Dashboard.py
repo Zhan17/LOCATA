@@ -341,8 +341,8 @@ class Dashboard():
               <br> \
               </div>", unsafe_allow_html=True)
             #st.write(f"Total percentage of house value change in the last three years: {total_percentage_change:.2f}%")
-            
-            st.caption("Zillow Home Value Index (ZHVI): A measure of the typical home value and market changes across a given region and housing type. It reflects the typical value for homes in the 35th to 65th percentile range.")
+            q1,q2,q3=st.st.columns([0.1,3,0.1])
+            q2.caption("Zillow Home Value Index (ZHVI): A measure of the typical home value and market changes across a given region and housing type. It reflects the typical value for homes in the 35th to 65th percentile range.")
         def competitor_bar_charts(df,b_type,zipcode):
             df['Price Range'].fillna("Not Provided", inplace=True)
             df_zip = df[df['Zip Code'] == zipcode]
