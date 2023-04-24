@@ -7,7 +7,6 @@ import plotly.express as px
 
 #import scipy
 import plotly.figure_factory as ff
-
 import Dashboard
 import time
 import concurrent.futures
