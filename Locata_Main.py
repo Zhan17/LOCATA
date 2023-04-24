@@ -245,11 +245,11 @@ class Locata_Main:
                             #### Suggested Zipcode base on your selection is
                             """)
                 t3, t4, t5, t6, t7, t8 = st.columns((0.002, 0.01, 0.002, 0.01, 0.002, 0.01))
-                t3.image('imagepin.png', width=40)
+                t3.image('Imagepin.png', width=40)
                 t4.write(""" ### {}""".format(y[0]))
-                t5.image('imagepin.png', width=40)
+                t5.image('Imagepin.png', width=40)
                 t6.write(""" ### {}""".format(y[1]))
-                t7.image('imagepin.png', width=40)
+                t7.image('Imagepin.png', width=40)
                 t8.write(""" ### {}""".format(y[2]))
                 
                 # if t4.button(str(y[0]),use_container_width=True):
