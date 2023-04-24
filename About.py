@@ -89,7 +89,7 @@ class About():
         st.write(self.underlined_title)
         st.markdown(self.team, unsafe_allow_html=True)
         st.markdown("<div class='step'> How to use Locata </div>", unsafe_allow_html=True)
-        st.image('image2.png', use_column_width=True)
+        st.image('../image2.png', use_column_width=True)
         aboutlocata="""
         About Locata:
                 + The recent pandemic has cast a shadow over small businesses,
