@@ -288,7 +288,7 @@ class Analysis():
             colors = [ '#ADD8E6', '#DAF7A6','#B19CD9']
             fig = px.bar(selected_df, x="Race", y="%", color="Zip code",color_discrete_sequence=colors)
             fig.update_layout(width=1000, height=600)
-            c1, c2 ,c3= st.columns([0.1, 0.4, 0.1])
+            c1, c2 ,c3= st.columns([0.1, 4, 0.1])
             c2.plotly_chart(fig)
             df3 = selected_df.groupby('Race').sum()
             sorted_df = df3.sort_values('%', ascending=False)
