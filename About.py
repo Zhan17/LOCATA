@@ -4,7 +4,7 @@ import pandas as pd
 import pydeck as pdk
 import numpy as np
 import plotly.express as px
-import os
+import Image
 #import scipy
 import plotly.figure_factory as ff
 #import Analysis
@@ -90,7 +90,8 @@ class About():
         st.markdown(self.team, unsafe_allow_html=True)
         st.markdown("<div class='step'> How to use Locata </div>", unsafe_allow_html=True)
         path = os.path.dirname(__file__)
-        st.image('.../image2.png', use_column_width=True)
+        image1 = Image.open('image2.png')
+        st.image(image1, use_column_width=True)
         aboutlocata="""
         About Locata:
                 + The recent pandemic has cast a shadow over small businesses,
