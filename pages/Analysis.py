@@ -210,7 +210,7 @@ class Analysis():
             df['Type'] = df['Type'].apply(ast.literal_eval)#####changed
             filtered_data = df[df['Type'].apply(lambda x: spec_bus_type in x)]
             total_count = len(filtered_data)
-            price_options = ['all'] + list(filtered_data['Price Range'].unique())
+            price_options = ['all'] + sorted(list(filtered_data['Price Range'].unique()))
             rating_options = ['all', '0-1', '1-2', '2-3', '3-4', '4-5']
             # Create the filter widgets
             price_filter = st.selectbox('Select Price Range', price_options, index=0)
