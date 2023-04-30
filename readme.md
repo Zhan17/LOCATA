@@ -1,4 +1,4 @@
-## LOCATA:https://zhan22-locata-locata-main-912uj4.streamlit.app/Locata
+## LOCATA: https://zhan22-locata-locata-main-912uj4.streamlit.app/Locata
 
 #### Decision Model and Simulation For Complex Commercial Site Selection Based On Existing Commercial Environment Analysis
 ##### Location Recommendation System
@@ -27,8 +27,12 @@ Locata uses the Streamlit app framework and includes recommendations, analysis, 
 More input features: More features for each business would allow for improved recommendation models.
 More nuanced success scoring: Qualitative analysis of Yelp reviews via NLP or even direct quantitative data on business success (revenue statements, foot traffic data, etc.) would allow for more accurate model training.
 More specific recommendations: Instead of recommending only zip codes, Locata could recommend specific addresses or business zones with available real estate. This would be more useful to real business customers.
+
 ### References
+
 Business News Daily. “Tips on Choosing The Right Location for Your Business” 2023. https://www.businessnewsdaily.com/15760-choosing-business-location.html
+
 Forbes. “How Small Businesses Drive the American Economy” 2022. https://www.forbes.com/sites/forbesbusinesscouncil/2022/03/25/how-small-businesses-drive-the-american-economy/?sh=7762a6d41699
+
 The New York Times. “After Enduring the Pandemic, Small Businesses Face New Worries” 2023. https://www.nytimes.com/2022/07/26/business/economy/small-business-recession.html
 
